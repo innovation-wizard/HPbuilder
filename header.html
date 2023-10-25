@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>header</title>
+    <style>
+        body {margin: 0;}
+        ul { list-style: none; margin: 0; padding: 0;}
+        li {list-style: none;}
+        a { text-decoration: none; }
+        @media screen and (min-width: 960px) {
+            header { 
+                display: flex; position: fixed; z-index: 1; width: 100%;  height: 120px; top: 0; background-color: white; 
+                box-sizing: border-box; padding: 10px 20px; justify-content: space-evenly;
+            }
+            .head { 
+                display: flex; font-size: 1.2rem; margin: 0; width: 200px; 
+            }
+            .icon { 
+                flex-basis: 200px; height: 100px;
+            }
+            .menus { 
+                display: flex; align-items: center; align-content: center; padding: 0; list-style: none;
+            }
+            .header_menu_contents {
+                display: flex; width: 720px; height: 100px; background-color: burlywood; padding-top: 25px; box-sizing: border-box;
+            }
+            .header_menu_content {
+                width: 100px; text-align: center;
+            }
+            .margin { width: 200px; }
+            #about { width: 220px; }
+            .hamburger_menu { display: none; }
+        }
+        @media screen and (max-width: 599px) {
+            header { 
+                position: fixed; z-index: 1; width: 100%;  height: 100px; top: 0; background-color: white; box-sizing: border-box;
+            }
+            .head { 
+                display: flex; text-align: center; justify-content: space-between; margin: 0; font-size: 1rem; height: 100px;
+            }
+            .icon { 
+                width: 200px; margin-top: 25px; margin-left: 15px; 
+            }
+            .menus { display: none; }
+            .margin { display: none;}
+            .hamburger_menu { position: relative; z-index: 1;}
+            .hamburger_menu_box {
+                position: fixed; top: 0; right: 0; display: flex; height: 32px; width: 32px; margin-top: 38px; margin-right: 38px;
+                justify-content: center; align-items: center; z-index: 50;
+            }
+            .hamburger_menu_box span, .hamburger_menu_box span::before, .hamburger_menu_box span::after {
+                content: ''; display: block; height: 4px; width: 32px; border-radius: 4px; background-color: black; position: absolute;
+            }
+            .hamburger_menu_box span::before {
+                bottom: 12px;
+            }
+            .hamburger_menu_box span::after {
+                top: 12px;
+            }
+            #hamburger_menu_checkbox {
+                display: none;
+                flex-wrap: wrap;
+            }
+            .hamburger_menu_contents {
+                background-color:lightsalmon; width: 300px; height: 700px; padding: 60px 10px; box-sizing: border-box; position: fixed;
+                left: 100%; z-index: 30; transition: all 0.5s;
+            }
+            .hamburger_menu_content {
+                padding: 15px; padding-right: 0px; border-bottom: solid 1px grey; text-align: center;
+            }
+
+            #hamburger_menu_checkbox:checked ~ .hamburger_menu_box span {
+                background-color: rgba(255, 255, 255, 0);
+            }
+            #hamburger_menu_checkbox:checked ~ .hamburger_menu_box span::before {
+                bottom: 0; transform: rotate(45deg);
+            }
+            #hamburger_menu_checkbox:checked ~ .hamburger_menu_box span::after {
+                top: 0; transform: rotate(-45deg);
+            }
+            #hamburger_menu_checkbox:checked ~ .hamburger_menu_contents {
+                left: auto; right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="head">
+            <div class="icon">
+                <a href="#Toppage">Icon</a>
+            </div>
+        </div>
+        <div class="menus">
+            <ul class="header_menu_contents">
+                <li class="header_menu_content" id="about"><a href="#About">About Company Name</a></li>
+                <li class="header_menu_content"><a href="#News">News</a></li>
+                <li class="header_menu_content"><a href="#Greeting">Greeting</a></li>
+                <li class="header_menu_content"><a href="#Suppliers">Suppliers</a></li>
+                <li class="header_menu_content"><a href="#Contact">Contact</a></li>
+                <li class="header_menu_content"><a href="#Company">Company</a></li>
+            </ul>
+        </div>
+        <div class="margin"></div>
+        <div class="hamburger_menu">
+            <input type="checkbox" id="hamburger_menu_checkbox">
+            <label for="hamburger_menu_checkbox" class="hamburger_menu_box">
+                <span></span>
+            </label>
+            <div class="hamburger_menu_contents">
+                <ul>
+                    <li class="hamburger_menu_content"><a href="#About">About Company Name</a></li>
+                    <li class="hamburger_menu_content"><a href="#News">News</a></li>
+                    <li class="hamburger_menu_content"><a href="#Greeting">Greeting</a></li>
+                    <li class="hamburger_menu_content"><a href="#Suppliers">Suppliers</a></li>
+                    <li class="hamburger_menu_content"><a href="#Contact">Contact</a></li>
+                    <li class="hamburger_menu_content"><a href="#Company">Company</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+</body>
+</html>

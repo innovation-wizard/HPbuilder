@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>recuruit</title>
+    <style>
+        body {margin: 0;}
+        .recruit_head { display: flex; flex-direction: column; text-align: center; flex-basis: 100%; padding: 5rem; 
+            align-items: center; }
+        #head_ja { font-size: 2rem; margin-top: 0; margin-bottom: 0.5rem; }
+        #head_eng { font-size: 1.2rem; color: yellowgreen; margin-top: 0; margin-bottom: 0.5rem; }
+        .recruit_background { display: flex; flex-direction: column; width: 95%; margin: 0 auto; border: 1px solid; 
+            border-top: 5px solid yellowgreen; min-height: 1000px; box-sizing: border-box;  padding-top: 30px; text-align: center;}
+        #recruit_content { font-size: 1rem; width: 100%; text-decoration: none; text-align: center; }
+        .recruit_target_head { font-size: 2rem; margin: 60px auto; }
+        .recruit_target_list { font-size: 1rem; padding-left: 0;}
+        #recruit_target_content {width: fit-content; margin: 0 auto 1rem; font-size: 1rem; }
+        .recruit_type_head { font-size: 2rem; margin: 60px auto; }
+        #recruit_type_group_head {font-size: 1rem; margin:0 auto 1rem; }
+        #recruit_type_group_content { font-size: 1rem; margin:0 auto 1rem; }
+    </style>
+</head>
+<body>
+    <a id="Recuruit"></a>
+    <div class="recruit_head">
+        <h2 id="head_ja">採用情報</h2>
+        <h3 id="head_eng">Recuruit</h3>
+    </div>
+    <div class="recruit_background">
+        <h2 class="recruit_target_head">募集対象</h2>
+        <ul class="recruit_target_list">
+            <li id="recruit_target_content">条件1</li>
+            <li id="recruit_target_content">条件2</li>
+            <li id="recruit_target_content">条件3</li>
+            <li id="recruit_target_content">条件4</li>
+        </ul>
+        <h2 class="recruit_type_head">募集職種</h2>
+        <h3 id="recruit_type_group_head">【部門1】</h3>
+        <span id="recruit_type_group_content">
+            内容1<br>
+            内容1<br>
+            内容1
+        </span>
+        <h3 id="recruit_type_group_head">【部門2】</h3>
+        <span id="recruit_type_group_content">
+            内容2<br>
+            内容2
+        </span>
+        <h3 id="recruit_type_group_head">【部門3】</h3>
+        <span id="recruit_type_group_content">
+            内容3<br>
+            内容3
+        </span>
+    </div>
+</body>
+</html>
