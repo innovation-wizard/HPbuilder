@@ -6,13 +6,26 @@
     <title>suppliers</title>
     <style>
         body {margin: 0;}
-        .suppliers_head { display: flex; flex-direction: column; text-align: center; flex-basis: 100%; padding: 5rem; 
-            align-items: center; }
-        #head_ja { font-size: 2rem; margin-top: 0; margin-bottom: 0.5rem; }
-        #head_eng { font-size: 1.2rem; color: yellowgreen; margin-top: 0; margin-bottom: 0.5rem; }
-        .suppliers_background { display: flex; flex-direction: column; width: 95%; margin: 0 auto; border: 1px solid; 
-            border-top: 5px solid yellowgreen; min-height: 500px; box-sizing: border-box;  padding-top: 15%; }
-        #supplier_content { font-size: 1rem; width: 100%; text-decoration: none; text-align: center; }
+        @media screen and (min-width: 960px) {
+            .suppliers_head { display: flex; flex-direction: column; text-align: center; flex-basis: 100%; padding: 5rem; 
+                align-items: center; }
+            #head_ja { font-size: 2rem; margin-top: 0; margin-bottom: 0.5rem; }
+            #head_eng { font-size: 1.2rem; color: yellowgreen; margin-top: 0; margin-bottom: 0.5rem; }
+            .suppliers_background { display: flex; flex-direction: column; width: 95%; margin: 0 auto; border: 1px solid; 
+                border-top: 5px solid yellowgreen; min-height: 500px; box-sizing: border-box;  padding-top: 15%; }
+            #supplier_content { font-size: 1rem; width: 100%; text-decoration: none; text-align: center; }
+        }
+
+        @media screen and (max-width: 599px) {
+            .suppliers_head { display: flex; flex-direction: column; text-align: center; flex-basis: 100%; padding: 5rem; 
+                align-items: center; }
+            #head_ja { margin-top: 0; margin-bottom: 0.5rem; }
+            #head_eng { font-size: 1.2rem; color: yellowgreen; margin-top: 0; margin-bottom: 0.5rem; }
+            .suppliers_background { display: flex; flex-direction: column; width: 95%; margin: 0 auto; border: 1px solid; 
+                border-top: 5px solid yellowgreen; min-height: 500px; box-sizing: border-box;  padding-top: 15%; }
+            #supplier_content { font-size: 1rem; width: 100%; text-decoration: none; text-align: center; }
+        }
+
     </style>
 </head>
 <body>
