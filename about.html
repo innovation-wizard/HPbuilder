@@ -5,67 +5,112 @@
     <meta name="viewport" content="width=device-width" />
     <title>about</title>
     <style>
-        body {margin: 0;}
+        body { margin: 0; font-family: serif; }
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         /* スマホ用CSS */
         @media screen and (max-width: 599px) {
-            .about_head { display: flex; flex-direction: column; text-align: center; flex-basis: 100%; padding: 5rem; justify-content: space-evenly; }
-            .head_ja { font-size: 2rem;}
-            .head_eng { font-size: 1.2rem; color: yellowgreen;}
-            .service_background { display: flex; text-align: center; justify-content: space-evenly; flex-wrap: wrap; width: 95%; margin: 0 auto;
+            .about_head { 
+                display: flex; flex-direction: column; text-align: center; flex-basis: 100%; padding: 5rem; justify-content: space-evenly; 
+            }
+            .head_ja { font-size: 2rem; animation: fadeIn 1s ease-out forwards; }
+            .head_eng { font-size: 1.2rem; color: yellowgreen; animation: fadeIn 1s ease-out forwards; }
+            .service_background { 
+                display: flex; text-align: center; justify-content: space-evenly; flex-wrap: wrap; width: 95%; margin: 0 auto;
                 border: solid 1px; border-top: solid 5px yellowgreen ; box-sizing: border-box; }
-            .corporate_philosophy { display: flex; text-align: center; width: 100%; height: 250px; justify-content: space-evenly; margin: 1rem;
-                margin-top: 3rem; border: 1px solid; font-size: 1rem; border-bottom: 1px solid ; box-sizing: border-box;}
+            .corporate_philosophy { 
+                display: flex; text-align: center; width: 100%; height: 250px; justify-content: space-evenly; margin: 1rem; margin-top: 3rem;
+                border: 1px solid; font-size: 1rem; border-bottom: 1px solid ; box-sizing: border-box; animation: fadeIn 1s ease-out forwards;
+            }
             .services { display: flex; flex-direction: column; flex-basis: 100%; justify-content: space-evenly; padding: 1rem; }
-            .service { display: flex; flex-direction: column; text-align: center; width: 100%; justify-content: space-evenly; border: 1px solid;
-                box-sizing: border-box; margin-bottom: 3rem; }
-            .service_head { text-align: center; width: 100%;}
+            .service { 
+                display: flex; flex-direction: column; text-align: center; width: 100%; justify-content: space-evenly; border: 1px solid;
+                box-sizing: border-box; margin-bottom: 3rem;  animation: fadeIn 1s ease-out forwards;
+            }
+            .service_head { text-align: center; width: 100%; animation: fadeIn 1s ease-out forwards; }
             .service_img { padding: 0; width: 100%; }
             .service_text { padding: 0; height: 225px;}
-            .service_contact_area{ display: flex; text-align: center; width: 100%; justify-content: space-evenly; margin: 1rem; border: 1px solid; 
-                box-sizing: border-box; }
-            .service_contact { font-size: 1.5rem; margin: 0 auto; padding-top: 0.5rem; padding-bottom: .5rem; }
+            .service_contact_area{ 
+                display: flex; text-align: center; width: 100%; justify-content: space-evenly; margin: 1rem; border: 1px solid; 
+                box-sizing: border-box; animation: fadeIn 1s ease-out forwards;
+            }
+            .service_contact { 
+                font-size: 1.5rem; margin: 0 auto; padding-top: 0.5rem; padding-bottom: .5rem; 
+            }
         }
         
         /* タブレット用CSS */
         @media screen and (min-width: 600px) {
-            .sp {display: none;}
-            .about_head { display: flex; flex-direction: column; text-align: center; flex-basis: 100%; padding: 5rem; justify-content: space-evenly; }
-            .head_ja { font-size: 1.5rem; margin: 0 0 0.5rem;}
-            .head_eng { font-size: 1rem; margin: 0 0 0.5rem; color: yellowgreen; }
-            .service_background { display: flex; text-align: center; justify-content: space-evenly; flex-wrap: wrap; width: 95%; margin: 0 auto;
-                border: solid 1px; border-top: solid 5px yellowgreen ; box-sizing: border-box; }
-            .corporate_philosophy { display: flex; text-align: center; width: 100%; height: 250px; justify-content: space-evenly; margin: 1rem;
-                margin-top: 3rem; border: 1px solid; font-size: 1rem; border-bottom: 1px solid ; box-sizing: border-box;}
-            .services { display: flex; flex-basis: 100%; justify-content: space-between; padding: 1rem; }
-            .service { display: flex; flex-direction: column; text-align: center; width: 49%; justify-content: space-evenly; border: 1px solid;
-                box-sizing: border-box; }
-            .service_head { text-align: center; width: 100%;}
+            .new_indent {display: none;}
+            .about_head { 
+                display: flex; flex-direction: column; text-align: center; flex-basis: 100%; padding: 5rem; justify-content: space-evenly; 
+            }
+            .head_ja { font-size: 1.5rem; margin: 0 0 0.5rem; animation: fadeIn 1s ease-out forwards; }
+            .head_eng { font-size: 1rem; margin: 0 0 0.5rem; color: yellowgreen; animation: fadeIn 1s ease-out forwards; }
+            .service_background { 
+                display: flex; text-align: center; justify-content: space-evenly; flex-wrap: wrap; width: 95%; margin: 0 auto;
+                border: solid 1px; border-top: solid 5px yellowgreen ; box-sizing: border-box; animation: fadeIn 1s ease-out forwards;
+            }
+            .corporate_philosophy { 
+                display: flex; text-align: center; width: 100%; height: 250px; justify-content: space-evenly; margin: 1rem; margin-top: 3rem; 
+                border: 1px solid; font-size: 1rem; border-bottom: 1px solid ; box-sizing: border-box; animation: fadeIn 1s ease-out forwards;
+            }
+            .services { 
+                display: flex; flex-basis: 100%; justify-content: space-between; padding: 1rem;
+            }
+            .service { 
+                display: flex; flex-direction: column; text-align: center; width: 49%; justify-content: space-evenly; border: 1px solid;
+                box-sizing: border-box; animation: fadeIn 1s ease-out forwards;
+            }
+            .service_head { text-align: center; width: 100%; animation: fadeIn 1s ease-out forwards; }
             .service_img { padding: 0; width: 100%; }
             .service_text { padding: 0; height: 225px;}
             .service_contact_area{ display: flex; text-align: center; width: 100%; justify-content: space-evenly; margin: 1rem; border: 1px solid; 
                 box-sizing: border-box; }
-            .service_contact { font-size: 1.5rem; margin: 0 auto; padding-top: 0.5rem; padding-bottom: .5rem; }
+            .service_contact { 
+                font-size: 1.5rem; margin: 0 auto; padding-top: 0.5rem; padding-bottom: 0.5rem; animation: fadeIn 1s ease-out forwards;
+            }
         }
 
         /* PC用CSS */
         @media screen and (min-width: 960px){
-            .sp {display: none;}
+            .new_indent { display: none; }
             .about_head { display: flex; flex-direction: column; text-align: center; flex-basis: 100%; padding: 5rem; justify-content: space-evenly; }
-            .head_ja { font-size: 2rem;}
-            .head_eng { font-size: 1.2rem; color: yellowgreen;}
-            .service_background { display: flex; text-align: center; justify-content: space-evenly; flex-wrap: wrap; width: 95%; margin: 0 auto;
-                border: solid 1px; border-top: solid 5px yellowgreen ; box-sizing: border-box; }
-            .corporate_philosophy { display: flex; text-align: center; width: 100%; height: 250px; justify-content: space-evenly; margin: 1rem;
-                margin-top: 3rem; border: 1px solid; font-size: 1rem; border-bottom: 1px solid ; box-sizing: border-box;}
+            .head_ja { font-size: 2rem; animation: fadeIn 1s ease-out forwards; }
+            .head_eng { font-size: 1.2rem; color: yellowgreen; animation: fadeIn 1s ease-out forwards; }
+            .service_background {
+                display: flex; text-align: center; justify-content: space-evenly; flex-wrap: wrap; width: 95%; margin: 0 auto;
+                border: solid 1px; border-top: solid 5px yellowgreen ; box-sizing: border-box; animation: fadeIn 1s ease-out forwards;
+            }
+            .corporate_philosophy {
+                display: flex; text-align: center; width: 100%; height: 250px; justify-content: space-evenly; margin: 1rem; margin-top: 3rem; 
+                border: 1px solid; font-size: 1rem; border-bottom: 1px solid ; box-sizing: border-box; animation: fadeIn 1s ease-out forwards;
+            }
             .services { display: flex; flex-basis: 100%; justify-content: space-between; padding: 1rem; }
-            .service { display: flex; flex-direction: column; text-align: center; width: 49%; justify-content: space-evenly; border: 1px solid;
-                box-sizing: border-box; }
-            .service_head { text-align: center; width: 100%;}
+            .service {
+                display: flex; flex-direction: column; text-align: center; width: 49%; justify-content: space-evenly; border: 1px solid;
+                box-sizing: border-box; animation: fadeIn 1s ease-out forwards;
+            }
+            .service_head { text-align: center; width: 100%; animation: fadeIn 1s ease-out forwards; }
             .service_img { padding: 0; width: 100%; }
             .service_text { padding: 0; height: 225px;}
-            .service_contact_area{ display: flex; text-align: center; width: 100%; justify-content: space-evenly; margin: 1rem; border: 1px solid; 
-                box-sizing: border-box; }
-            .service_contact { font-size: 2rem; margin: 0 auto; padding-top: 0.5rem; padding-bottom: .5rem; }
+            .service_title { font-size: 2rem; margin: 1.5rem auto; }
+            .service_content { font-size: 1rem; margin-bottom: 1rem; padding: 0 1rem; text-align: left; }
+            .service_contact_area{ 
+                display: flex; text-align: center; width: 100%; justify-content: space-evenly; margin: 1rem; border: 1px solid; 
+                box-sizing: border-box; animation: fadeIn 1s ease-out forwards; 
+            }
+            .service_contact { font-size: 2rem; margin: 0 auto; padding-top: 0.5rem; padding-bottom: .5rem; color: #000; }
         }
     </style>
 </head>
@@ -74,12 +119,12 @@
     <div class="about_head">
         <h2 class="head_ja">
             [会社名]
-            <br class="sp">
+            <br class="new_indent">
             について
         </h2>
         <h3 class="head_eng">
             About
-            <br class="sp">
+            <br class="new_indent">
             [Company Name]
         </h3>
     </div>
@@ -96,15 +141,15 @@
             <div class="service">
                 <img class="service_img" src="./img/PC-SES.png" alt="PC-SES">
                 <div class="service_text">
-                    <h2>サービスタイトル</h2>
-                    <p>サービス詳細</p>
+                    <h2 class="service_title">サービスタイトル</h2>
+                    <p class="service_content">サービス詳細</p>
                 </div>
             </div>
             <div class="service">
                 <img class="service_img" src="./img/PC-code.png" alt="PC-code">
                 <div class="service_text">
-                    <h2>サービスタイトル</h2>
-                    <p>サービス詳細</p>
+                    <h2 class="service_title">サービスタイトル</h2>
+                    <p class="service_content">サービス詳細</p>
                 </div>
             </div>
         </div>
