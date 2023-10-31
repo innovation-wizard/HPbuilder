@@ -19,6 +19,7 @@
         }
 
         @media screen and (max-width: 599px) {
+            .contact { height: 700px; }
             .contact_head { 
                 display: flex; flex-direction: column; text-align: center; flex-basis: 100%; padding: 5rem; 
                 align-items: center; animation: fadeIn 1s ease-out forwards; }
@@ -42,6 +43,7 @@
         }
 
         @media screen and (min-width: 600px) {
+            .contact { height: 600px; }
             .contact_head { 
                 display: flex; flex-direction: column; text-align: center; flex-basis: 100%; padding: 5rem; 
                 align-items: center; }
@@ -68,6 +70,7 @@
         }
 
         @media screen and (min-width: 960px) {
+            .contact { height: 900px; }
             .contact_head { 
                 display: flex; flex-direction: column; text-align: center; flex-basis: 100%; padding: 5rem; 
                 align-items: center; }
@@ -96,13 +99,15 @@
 </head>
 <body>
     <a id="Contact"></a>
-    <div class="contact_head">
-        <h2 id="head_ja">お問い合わせ</h2>
-        <h3 id="head_eng">Contact</h3>
-    </div>
-    <div class="contact_background">
-        <p class="contact_message">Test</p>
-        <a class="mail_address" href="mailto::____">mail.address@test</a>
+    <div class="contact">
+        <div class="contact_head">
+            <h2 id="head_ja">お問い合わせ</h2>
+            <h3 id="head_eng">Contact</h3>
+        </div>
+        <div class="contact_background">
+            <p class="contact_message">Test</p>
+            <a class="mail_address" href="mailto::____">mail.address@test</a>
+        </div>        
     </div>
 </body>
 </html>

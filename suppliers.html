@@ -36,6 +36,7 @@
         }
 
         @media screen and (min-width: 600px) {
+            .suppliers { height: 600px; }
             .suppliers_head { 
                 display: flex; flex-direction: column; text-align: center; flex-basis: 100%; padding: 5rem; 
                 align-items: center; }
@@ -53,6 +54,7 @@
         }
 
         @media screen and (min-width: 960px) {
+            .suppliers { height: 900px; }
             .suppliers_head { 
                 display: flex; flex-direction: column; text-align: center; flex-basis: 100%; padding: 5rem; 
                 align-items: center; 
@@ -70,12 +72,14 @@
 </head>
 <body>
     <a id="Suppliers"></a>
-    <div class="suppliers_head">
-        <h2 id="head_ja">主な取引先</h2>
-        <h3 id="head_eng">Suppliers</h3>
-    </div>
-    <div class="suppliers_background">
-        <p id="supplier_content">Test</p>
+    <div class="suppliers">
+        <div class="suppliers_head">
+            <h2 id="head_ja">主な取引先</h2>
+            <h3 id="head_eng">Suppliers</h3>
+        </div>
+        <div class="suppliers_background">
+            <p id="supplier_content">Test</p>
+        </div>
     </div>
 </body>
 </html>
