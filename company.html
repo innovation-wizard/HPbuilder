@@ -1,23 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width" />
-    <title>company</title>
     <style>
-        body { margin: 0; font-family: serif;}
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
         @media screen and (max-width: 599px) {
             .company {
                 display: flex; flex-direction: column; text-align: center; background-position: center;
@@ -51,7 +35,7 @@
                 font-weight: bold; font-size: 15px; width: 35px; padding-right: 60px; border-bottom: solid 1px grey;
                 vertical-align: bottom;
             }
-            td { font-size: 15px; padding-top: 40px;  border-bottom: solid 1px grey; }
+            td { font-size: 15px; padding-top: 40px;  border-bottom: solid 1px grey; min-width: 190px;}
         }
 
         @media screen and (min-width: 600px) {
@@ -88,7 +72,7 @@
                 font-weight: bold; font-size: 15px; padding-right: 60px; border-bottom: solid 1px grey;
                 vertical-align: bottom;
             }
-            td { font-size: 12px; padding-top: 15px;  border-bottom: solid 1px grey; }
+            td { font-size: 12px; padding-top: 15px;  border-bottom: solid 1px grey; min-width: 200px;}
             .new_indent { display: none; }
         }
 
@@ -125,7 +109,7 @@
                 font-weight: bold; font-size: 19px; padding-right: 60px; border-bottom: solid 1px grey;
                 vertical-align: bottom;
             }
-            td { font-size: 18px; padding-top: 40px;  border-bottom: solid 1px grey; }
+            td { font-size: 18px; padding-top: 40px;  border-bottom: solid 1px grey; min-width: 300px;}
             .new_indent { display: none; }
         }
     </style>
@@ -142,7 +126,7 @@
 
             </div>
             <div class="company_infomations">
-                <h3 class="company_name">会社名</h3>
+                <h3 class="company_name"><?php echo $companies['company_name_ja'] ?></h3>
                 <table class="company_content">
                     <tbody>
                         <tr>
@@ -150,7 +134,7 @@
                                 役員
                             </th>
                             <td>
-                                役員名
+                                <?php echo $company_data['officers'] . ' ' . $company_data['ceo_last_name'] . $company_data['ceo_first_name'] ?>
                             </td>
                         </tr>
                         <tr>
@@ -158,7 +142,8 @@
                                 住所
                             </th>
                             <td>
-                                〒郵便番号 <br class="new_indent"> 住所
+                                〒 <?php echo $company_data['postal_number'] ?>
+                                <br class="new_indent"> <?php echo $company_data['address'] ?>
                             </td>
                         </tr>
                         <tr>
@@ -166,7 +151,7 @@
                                 連絡
                             </th>
                             <td>
-                                000-0000-0000
+                                <?php echo $company_data['phone_number'] ?>
                             </td>
                         </tr>
                         <tr>
@@ -174,7 +159,7 @@
                                 事業<br class="new_indent">内容
                             </th>
                             <td>
-                                事業内容A/事業内容B/事業内容C
+                                <?php echo $company_data['buisiness_activeties'] ?>
                             </td>
                         </tr>
                     </tbody>

@@ -1,15 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width" />
-    <title>header</title>
     <style>
-        body { margin: 0; font-family: serif; }
-        ul { list-style: none; margin: 0; padding: 0;}
-        li {list-style: none;}
-        a { text-decoration: none; color: #000; }
-
         /* スマホ用CSS */
         @media screen and (max-width: 599px) {
             header { 
@@ -52,8 +44,10 @@
                 top: 12px;
             }
             #hamburger_menu_checkbox {
-                display: none;
-                flex-wrap: wrap;
+                display: none; flex-wrap: wrap;
+            }
+            .hamburger_menu_content_checkbox {
+                display: none; flex-wrap: wrap;
             }
             .hamburger_menu_contents {
                 background-color: white; width: 80%; height: 700px; padding: 60px 10px; box-sizing: border-box; position: fixed;

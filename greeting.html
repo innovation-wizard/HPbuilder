@@ -1,23 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width" />
-        <title>greeting</title>
-        <style>
-            body { margin: 0; font-family: serif; }
-            @keyframes fadeIn {
-                0% {
-                    opacity: 0;
-                    transform: translateY(50px);
-                }
-
-                100% {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
-            }
-            
+        <style>            
             @media screen and (max-width: 599px) {
                 .greeting { 
                     display: flex; flex-direction: column; text-align: center; height: 1000px; background-size: 100%;
@@ -129,7 +113,7 @@
         </style>
     </head>
     <body>
-        <a id="#Greeting"></a>
+        <a id="Greeting"></a>
         <div class="greeting">
             <div class="greeting_head">
                 <h2 id="head_ja">ご挨拶</h2>
@@ -137,13 +121,16 @@
             </div>
             <div class="greeting_buckground">
                 <div class="greeting_title_buckground">
-                    <h2 class="greeting_title">タイトル</h2>
+                    <h2 class="greeting_title">
+                        <?php
+                            echo $company_data['ceo_greeting_title'];
+                        ?>
+                    </h2>
                 </div>
                 <div class="greeting_message">
-                    代表挨拶の内容<br>
-                    代表挨拶の内容<br>
-                    代表挨拶の内容<br>
-                    代表挨拶の内容<br>
+                    <?php
+                        echo $company_data['ceo_greeting'];
+                    ?>
                 </div>
                 <div class="greeting_names">
                     <h3 class="greeting_CEO">代表取締役</h3>

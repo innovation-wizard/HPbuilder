@@ -1,23 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width" />
-    <title>toppage</title>
     <style>
-        body { margin: 0; font-family: serif; }
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
         /* スマホ用CSS */
         @media screen and (max-width: 599px) {
             .toppage { position: relative; }
@@ -47,11 +31,13 @@
     </style>
 </head>
 <body>
-    <a id="#Toppage"></a>
+    <a id="Toppage"></a>
     <div class="toppage">
         <img src="./img/background.jpg" alt="background" class="background">
         <div class="slogan">
-            スローガン
+            <?php
+                echo $company_data['slogan'];
+            ?>
         </div>
     </div>
 </body>

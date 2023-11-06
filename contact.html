@@ -1,23 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width" />
-    <title>contact</title>
     <style>
-        body { margin: 0; font-family: serif;}
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
         @media screen and (max-width: 599px) {
             .contact { height: 700px; }
             .contact_head { 
@@ -56,7 +40,7 @@
             }
             .contact_background { 
                 display: flex; flex-direction: column; width: 95%; margin: 0 auto; border: 1px solid; 
-                border-top: 5px solid yellowgreen; min-height: 300px; box-sizing: border-box;  padding-top: 15%;
+                border-top: 5px solid yellowgreen; min-height: 300px; box-sizing: border-box; padding-top: 10%; 
                 animation: fadeIn 1s ease-out forwards;
             }
             .contact_message { 
@@ -83,7 +67,7 @@
             }
             .contact_background { 
                 display: flex; flex-direction: column; width: 95%; margin: 0 auto; border: 1px solid; 
-                border-top: 5px solid yellowgreen; min-height: 500px; box-sizing: border-box;  padding-top: 15%;
+                border-top: 5px solid yellowgreen; min-height: 500px; box-sizing: border-box;  padding-top: 200px;
                 animation: fadeIn 1s ease-out forwards;
             }
             .contact_message { 
@@ -105,8 +89,12 @@
             <h3 id="head_eng">Contact</h3>
         </div>
         <div class="contact_background">
-            <p class="contact_message">Test</p>
-            <a class="mail_address" href="mailto::____">mail.address@test</a>
+            <p class="contact_message">お問い合わせは下記メールアドレスまでお願いいたします。</p>
+            <a class="mail_address" href="mailto::____">
+                <?php
+                    echo $company_data['mail_address'];
+                ?>
+            </a>
         </div>        
     </div>
 </body>
